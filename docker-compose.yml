@@ -1,0 +1,14 @@
+version: "3"
+services:
+  ml:
+    container_name: ml
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    restart: always
+    tty: true
+    volumes:
+      - .:/home/work
+    ports:
+      - "8888:8888"
+      - "6006:6006"
